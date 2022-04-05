@@ -48,6 +48,10 @@ gem "devise", "~> 4.8", ">= 4.8.1"
 
 gem "money", "~> 6.16"
 
+gem "nokogiri", "~> 1.13.3"
+
+gem "open-uri", "~> 0.2.0"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
