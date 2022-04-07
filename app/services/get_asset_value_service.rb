@@ -1,4 +1,4 @@
-class GetAssetValue
+class GetAssetValueService
   attr_reader :value
   def initialize(asset, source_index)
     @value = scrape_asset_value(asset, source_index)
@@ -11,7 +11,7 @@ class GetAssetValue
     begin
       doc = Nokogiri::HTML(URI.open(ASSET_SOURCES[source_index]+asset))
     rescue
-      return false
+      raise 'Access error'
     else
       return find_value_in_page(doc, source_index)
     end
@@ -25,8 +25,6 @@ class GetAssetValue
       return doc.css('.line-info .value p').text
     when 2
       return doc.css('.acao-valor').text.strip
-    else
-      return false
     end
   end
 end
