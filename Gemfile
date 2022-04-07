@@ -52,6 +52,8 @@ gem "nokogiri", "~> 1.13.3"
 
 gem "open-uri", "~> 0.2.0"
 
+gem 'sidekiq',  "~> 6.4.1"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -78,4 +80,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "rspec-sidekiq"
 end
