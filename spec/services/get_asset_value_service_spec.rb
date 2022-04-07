@@ -9,21 +9,21 @@ RSpec.describe GetAssetValueService, type: :model do
       context 'with source index = 0' do
         let(:source_index) { 0 }
         it 'returns value from first source', :vcr  do 
-          expect(value).to eq("34,83")
+          expect(value).to eq(3589)
         end
       end
 
       context 'with source index = 1' do
         let(:source_index) { 1 }
         it 'returns value from second source', :vcr  do
-          expect(value).to eq("34,83")
+          expect(value).to eq(3586)
         end
       end
 
       context 'with source index = 2' do
         let(:source_index) { 2 }
         it 'returns value from third source', :vcr  do
-          expect(value).to eq("34,85")
+          expect(value).to eq(3590)
         end
       end
     end
