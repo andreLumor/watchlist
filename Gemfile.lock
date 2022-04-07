@@ -316,7 +316,7 @@ DEPENDENCIES
   rails-erd
   redis (~> 4.0)
   rspec-rails (~> 5.1.1)
-  rspec-sidekiq
+  rspec-sidekiq (~> 3.1.0)
   sass-rails (~> 6.0)
   selenium-webdriver
   sidekiq (~> 6.4.1)

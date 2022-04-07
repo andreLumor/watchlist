@@ -4,7 +4,7 @@ class QuoteJob
 
   def perform(ticker, source_index = rand(3))
     if asset_value = GetAssetValueService.new(ticker, source_index).value
-      Quote.create!(asset: Asset.find_by(symbol: ticker), price: asset_value)
+      Asset.find_by(symbol: ticker).quotes.create!(price: asset_value)
     else
       raise 'Asset value could not be found'
     end

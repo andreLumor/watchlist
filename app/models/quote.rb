@@ -5,11 +5,7 @@ class Quote < ApplicationRecord
   validates :price, presence: true
 
   before_create do
-    if asset.last_quote
-      asset.last_quote.update(current: false)
-      self.current = true
-    else
-      self.current = true
-    end
+    asset.last_quote.try(:update_attributes, { current: false })
+    self.current = true
   end
 end

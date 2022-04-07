@@ -31,6 +31,6 @@ class GetAssetValueService
   end
 
   def to_cents(value)
-    value*100
+    (value*100).to_i
   end
 end
